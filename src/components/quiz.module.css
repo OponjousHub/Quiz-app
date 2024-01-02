@@ -27,7 +27,7 @@
   margin: 0 auto;
 }
 
-.optionBtn {
+.option button {
   background-color: rgb(113, 192, 234);
   border-radius: 10px;
   padding: 8px 0;
@@ -59,4 +59,16 @@
   width: 260px;
   display: block;
   /* background-color: rgb(47, 130, 255); */
+}
+.option button.selected {
+  background: #f5a76c;
+  color: #2c203d;
+}
+.option button.correct {
+  background: #5af59d;
+  color: #2c203d;
+}
+.option button.wrong {
+  background: #f55a98;
+  color: #2c203d;
 }
