@@ -1,19 +1,34 @@
 import { useEffect, useState } from "react";
+import classes from "./quiz.module.css";
 
 function Timer({ timeout, onTimeout }) {
   const [remainingTime, setRemainingTime] = useState(timeout);
 
   useEffect(() => {
-    setTimeout(onTimeout, timeout);
+    const timer = setTimeout(onTimeout, timeout);
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, [onTimeout, timeout]);
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       setRemainingTime((prevRemaining) => prevRemaining - 100);
     }, 100);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
-  return <progress max={timeout} value={remainingTime} />;
+  return (
+    <progress
+      className={classes.progress}
+      max={timeout}
+      value={remainingTime}
+    />
+  );
 }
 
 export default Timer;
