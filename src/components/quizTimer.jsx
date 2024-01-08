@@ -24,7 +24,7 @@ function Timer({ timeout, onTimeout }) {
 
   return (
     <progress
-      className={classes.progress}
+      className={`${classes.progress}`}
       max={timeout}
       value={remainingTime}
     />

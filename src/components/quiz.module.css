@@ -49,11 +49,7 @@
   flex-direction: column;
   align-items: center;
 }
-.quizOverText {
-  letter-spacing: 2.5px;
-  color: rgb(58, 12, 101);
-  font-family: "Roboto Condensed", sans-serif;
-}
+
 .progress {
   margin: 0 auto;
   width: 260px;
@@ -79,3 +75,6 @@
   background: #f55a98;
   color: #2c203d;
 }
+/* .mode {
+  background: #f5a76c;
+} */
